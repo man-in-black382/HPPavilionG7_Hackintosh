@@ -1,10 +1,12 @@
 # HPPavilionG7_Hackintosh
 Drivers and patched DSDT/SSDT files
 
+#Brightness
 Brightness slider enabled with IntelBacklight.kext and CLOVER DSTD fix “AddPNLF_1000000”
 
 Brightness keys patch for DSDT:
 
+```
 into method label _Q10 replace_content
 begin
 // Brightness Down\n
@@ -17,7 +19,8 @@ begin
     Notify(\_SB.PCI0.LPCB.PS2K, 0x0206)\n
     Notify(\_SB.PCI0.LPCB.PS2K, 0x0286)\n
 end;
-
+```
+#Sound
 VoodooHDA Volume Slider FIX
 
 1. Set the volume to max both on System Volume settings and VoodooHDA preferences pane (the PCM output in particular).
